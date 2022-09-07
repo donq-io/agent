@@ -124,6 +124,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/s3 v1.27.1
 	github.com/fatih/color v1.13.0
 	github.com/grafana/vmware_exporter v0.0.2-beta
+	github.com/open-telemetry/opentelemetry-collector-contrib/receiver/datadogreceiver v0.55.0
 	go.opentelemetry.io/collector/pdata v0.55.0
 	go.opentelemetry.io/collector/semconv v0.55.0
 )
@@ -149,6 +150,7 @@ require (
 	github.com/Azure/go-autorest/autorest/validation v0.3.1 // indirect
 	github.com/Azure/go-autorest/logger v0.2.1 // indirect
 	github.com/Azure/go-autorest/tracing v0.6.0 // indirect
+	github.com/DataDog/datadog-agent/pkg/trace/exportable v0.0.0-20201016145401-4646cf596b02 // indirect
 	github.com/Masterminds/goutils v1.1.1 // indirect
 	github.com/Masterminds/semver/v3 v3.1.1 // indirect
 	github.com/Masterminds/sprig/v3 v3.2.2 // indirect
@@ -386,6 +388,7 @@ require (
 	github.com/pelletier/go-toml/v2 v2.0.0-beta.8 // indirect
 	github.com/percona/exporter_shared v0.7.4-0.20211108113423-8555cdbac68b // indirect
 	github.com/percona/percona-toolkit v0.0.0-20211210121818-b2860eee3152 // indirect
+	github.com/philhofer/fwd v1.1.1 // indirect
 	github.com/pierrec/lz4 v2.6.1+incompatible // indirect
 	github.com/pierrec/lz4/v4 v4.1.14 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
@@ -429,6 +432,7 @@ require (
 	github.com/thanos-io/thanos v0.25.0 // indirect
 	github.com/theupdateframework/notary v0.7.0 // indirect
 	github.com/tidwall/pretty v1.2.0 // indirect
+	github.com/tinylib/msgp v1.1.3 // indirect
 	github.com/tklauser/go-sysconf v0.3.10 // indirect
 	github.com/tklauser/numcpus v0.4.0 // indirect
 	github.com/tomnomnom/linkheader v0.0.0-20180905144013-02ca5825eb80 // indirect
@@ -575,3 +579,5 @@ exclude (
 )
 
 replace github.com/github/smimesign => github.com/grafana/smimesign v0.2.1-0.20220408144937-2a5adf3481d3
+
+replace github.com/open-telemetry/opentelemetry-collector-contrib/receiver/datadogreceiver => github.com/donq-io/opentelemetry-collector-contrib/receiver/datadogreceiver v0.55.0

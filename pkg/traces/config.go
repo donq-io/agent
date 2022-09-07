@@ -18,6 +18,7 @@ import (
 	"github.com/open-telemetry/opentelemetry-collector-contrib/processor/attributesprocessor"
 	"github.com/open-telemetry/opentelemetry-collector-contrib/processor/spanmetricsprocessor"
 	"github.com/open-telemetry/opentelemetry-collector-contrib/processor/tailsamplingprocessor"
+	"github.com/open-telemetry/opentelemetry-collector-contrib/receiver/datadogreceiver"
 	"github.com/open-telemetry/opentelemetry-collector-contrib/receiver/jaegerreceiver"
 	"github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver"
 	"github.com/open-telemetry/opentelemetry-collector-contrib/receiver/opencensusreceiver"
@@ -789,6 +790,7 @@ func tracingFactories() (component.Factories, error) {
 	}
 
 	receivers, err := component.MakeReceiverFactoryMap(
+		datadogreceiver.NewFactory(),
 		jaegerreceiver.NewFactory(),
 		zipkinreceiver.NewFactory(),
 		otlpreceiver.NewFactory(),
